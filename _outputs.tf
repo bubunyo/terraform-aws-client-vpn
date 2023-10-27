@@ -4,6 +4,12 @@ output "security_group_id" {
 output "vpn_endpoint_id" {
   value = aws_ec2_client_vpn_endpoint.default.id
 }
+output "vpn_dns_name" {
+  value = aws_ec2_client_vpn_endpoint.default.dns_name
+}
+output "vpn_self_service_portal_url" {
+  value = aws_ec2_client_vpn_endpoint.default.self_service_portal
+}
 output "vpn_client_cert" {
   value = tls_locally_signed_cert.root.cert_pem
 }

@@ -38,6 +38,12 @@ variable "organization_name" {
   default     = "ACME, Inc"
 }
 
+variable "session_timeout" {
+  description = "VPN Session timeout. Defaults to 8 hours"
+  type        = number
+  default     = 8
+}
+
 variable "tags" {
   type        = map(string)
   default     = {}
