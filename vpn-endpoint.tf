@@ -10,9 +10,10 @@ resource "aws_ec2_client_vpn_endpoint" "default" {
   vpc_id                 = var.vpc_id
 
   authentication_options {
-    type                       = var.authentication_type
-    root_certificate_chain_arn = var.authentication_type != "certificate-authentication" ? null : aws_acm_certificate.root.arn
-    saml_provider_arn          = var.authentication_saml_provider_arn
+    type                           = var.authentication_type
+    root_certificate_chain_arn     = var.authentication_type != "certificate-authentication" ? null : aws_acm_certificate.root.arn
+    saml_provider_arn              = var.authentication_saml_provider_arn
+    self_service_saml_provider_arn = var.authentication_self_service_saml_provider_arn
   }
 
   connection_log_options {

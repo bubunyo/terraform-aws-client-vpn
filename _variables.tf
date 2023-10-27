@@ -65,6 +65,11 @@ variable "authentication_saml_provider_arn" {
   description = "(Optional) The ARN of the IAM SAML identity provider if type is federated-authentication."
 }
 
+variable "authentication_self_service_saml_provider_arn" {
+  default     = null
+  description = "(Optional) The ARN of the IAM Self Service SAML identity provider if type is federated-authentication."
+}
+
 variable "split_tunnel" {
   default     = true
   description = "With split_tunnel false, all client traffic will go through the VPN."
